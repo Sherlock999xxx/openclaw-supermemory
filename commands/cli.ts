@@ -404,14 +404,10 @@ export function registerCliSetup(api: OpenClawPluginApi): void {
 					console.log(
 						`  Capture mode:     ${pluginConfig.captureMode ?? "all"}`,
 					)
-					const entityCtx = pluginConfig.entityContext as
-						| string
-						| undefined
+					const entityCtx = pluginConfig.entityContext as string | undefined
 					if (entityCtx) {
 						const truncated =
-							entityCtx.length > 50
-								? `${entityCtx.slice(0, 50)}...`
-								: entityCtx
+							entityCtx.length > 50 ? `${entityCtx.slice(0, 50)}...` : entityCtx
 						console.log(`  Entity context:   "${truncated}"`)
 					} else {
 						console.log("  Entity context:   (default)")
